@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Firebase Data</title>
+</head>
+<body>
+    <h1>Firebase Users Data</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Load</th>
+                <th>Parking Brake</th>
+                <th>Pressure</th>
+                <th>Temperature</th>
+                <th>Wheel Rotations</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for key, values in data.items() %}
+                <tr>
+                    <td>{{ values.load }}</td>
+                    <td>{{ values.parking_brake }}</td>
+                    <td>{{ values.pressure }}</td>
+                    <td>{{ values.temperature }}</td>
+                    <td>{{ values.wheel_rotations }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
